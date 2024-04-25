@@ -1,0 +1,41 @@
+﻿<Page x:Class="pr4.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:pr4"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="Wheat"
+      MinHeight="450" MinWidth="800"
+      Title="Page1">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+     
+        <TextBlock Grid.Row="0"  Grid.ColumnSpan="6" Text="Добавьте в таблицу каждый вопрос и 3 варианта ответа на них!"  TextAlignment="Center" Background="GreenYellow"></TextBlock>
+        <DataGrid x:Name="MyDataGrid" Grid.Row="1"  Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="6"   VerticalAlignment="Top" CellEditEnding="MyDataGrid_CellEditEnding"></DataGrid>
+        <Button Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Content="Добавить элемент" Click="Button_Click" ></Button>
+        <Frame x:Name="PageFrame" Grid.Row="1" Grid.ColumnSpan="6" Grid.RowSpan="10" ></Frame>
+    </Grid>
+</Page>
